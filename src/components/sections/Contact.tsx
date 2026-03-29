@@ -19,14 +19,13 @@ export function Contact({ data, social }: ContactProps) {
     <SectionWrapper id="contact" label={t.contact.sectionLabel}>
       <div className="text-center mb-14">
         <h2 className="font-display text-display-lg font-semibold text-brand-900 mb-4 text-balance">
-          {data.headline}
+          {t.contact.headline}
         </h2>
         <p className="text-ink-secondary text-lg max-w-2xl mx-auto">
-          {data.subheadline}
+          {t.contact.subheadline}
         </p>
       </div>
 
-      {/* Centered Contact Info */}
       <motion.div
         className="flex flex-col items-center gap-6 max-w-md mx-auto"
         variants={staggerContainer}
@@ -34,7 +33,6 @@ export function Contact({ data, social }: ContactProps) {
         whileInView="visible"
         viewport={viewportConfig}
       >
-        {/* Phone */}
         <motion.a
           href={`tel:${data.phone.replace(/\s/g, "")}`}
           variants={fadeUp}
@@ -51,7 +49,6 @@ export function Contact({ data, social }: ContactProps) {
           </div>
         </motion.a>
 
-        {/* Email */}
         <motion.a
           href={`mailto:${data.email}`}
           variants={fadeUp}
@@ -68,7 +65,6 @@ export function Contact({ data, social }: ContactProps) {
           </div>
         </motion.a>
 
-        {/* Social Links */}
         <motion.div variants={fadeUp} className="flex gap-3 pt-2">
           {social.instagram && (
             <a

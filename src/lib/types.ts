@@ -194,5 +194,8 @@ export interface Translations {
   booking: Record<string, string>;
   contact: Record<string, string>;
   footer: Record<string, string>;
+  legal: Record<string, string>;
+  privacy: Record<string, string>;
+  terms: Record<string, string>;
   common: Record<string, string>;
 }

@@ -1,7 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { fadeUp, viewportConfig } from "@/lib/animations";
+import { useInView } from "@/lib/useInView";
 import { clsx } from "clsx";
 
 interface SectionWrapperProps {
@@ -19,6 +18,8 @@ export function SectionWrapper({
   label,
   background = "default",
 }: SectionWrapperProps) {
+  const { ref, isInView } = useInView({ threshold: 0.1 });
+
   const bgStyles = {
     default: "bg-surface",
     warm: "bg-surface-warm",
@@ -30,12 +31,9 @@ export function SectionWrapper({
       id={id}
       className={clsx("section-padding", bgStyles[background], className)}
     >
-      <motion.div
-        className="container-narrow"
-        initial="hidden"
-        whileInView="visible"
-        viewport={viewportConfig}
-        variants={fadeUp}
+      <div
+        ref={ref}
+        className={clsx("container-narrow anim-fade-in", isInView && "in-view")}
       >
         {label && (
           <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase text-brand-600 mb-4">
@@ -43,7 +41,7 @@ export function SectionWrapper({
           </span>
         )}
         {children}
-      </motion.div>
+      </div>
     </section>
   );
 }

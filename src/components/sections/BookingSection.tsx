@@ -1,30 +1,13 @@
 "use client";
 
 import { useEffect, useCallback, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { useI18n } from "@/lib/i18n";
+import { useInView } from "@/lib/useInView";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
-import { fadeUp, scaleIn, viewportConfig } from "@/lib/animations";
+import { clsx } from "clsx";
 import type { BookingData } from "@/lib/types";
-
-/* ─────────────────────────────────────────────────────────
-   Booking Section
-
-   Supports two modes driven by site.json:
-   • "embed"  — renders Calendly inline via iframe
-   • "popup"  — renders a CTA button that opens the
-                 Calendly popup widget (loads script on demand)
-
-   If booking.enabled === false the component returns null
-   and takes up zero DOM space.
-
-   CMS migration:
-   const booking = await client.fetch(
-     `*[_type == "siteSettings"][0].booking`
-   )
-   ───────────────────────────────────────────────────────── */
 
 interface BookingSectionProps {
   data: BookingData;
@@ -33,14 +16,12 @@ interface BookingSectionProps {
 export function BookingSection({ data }: BookingSectionProps) {
   const { t } = useI18n();
   const [scriptLoaded, setScriptLoaded] = useState(false);
-  const [popupOpen, setPopupOpen] = useState(false);
+  const { ref, isInView } = useInView();
 
-  /* ── Conditionally skip render ──────────────────────── */
   if (!data.enabled) {
     return null;
   }
 
-  /* ── Load Calendly widget script on demand (popup mode) */
   useEffect(() => {
     if (data.mode !== "popup") {
       return;
@@ -62,19 +43,12 @@ export function BookingSection({ data }: BookingSectionProps) {
     };
     document.head.appendChild(script);
 
-    /* Also inject Calendly's base CSS for the popup overlay */
     const link = document.createElement("link");
     link.rel = "stylesheet";
     link.href = "https://assets.calendly.com/assets/external/widget.css";
     document.head.appendChild(link);
-
-    return () => {
-      /* Cleanup is intentionally omitted — the script is
-         cached and harmless to keep around once loaded.    */
-    };
   }, [data.mode]);
 
-  /* ── Open Calendly popup ────────────────────────────── */
   const openPopup = useCallback(() => {
     if (
       typeof window !== "undefined" &&
@@ -82,7 +56,6 @@ export function BookingSection({ data }: BookingSectionProps) {
       scriptLoaded
     ) {
       (window as any).Calendly.initPopupWidget({ url: data.url });
-      setPopupOpen(true);
     }
   }, [data.url, scriptLoaded]);
 
@@ -92,35 +65,32 @@ export function BookingSection({ data }: BookingSectionProps) {
       label={t.booking.sectionLabel}
       background="muted"
     >
-      <div className="text-center mb-10">
-        <motion.h2
-          className="font-display text-display-lg font-semibold text-brand-900 mb-4 text-balance"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
+      <div ref={ref} className="text-center mb-10">
+        <h2
+          className={clsx(
+            "font-display text-display-lg font-semibold text-brand-900 mb-4 text-balance anim-fade-up",
+            isInView && "in-view"
+          )}
         >
-          {data.headline}
-        </motion.h2>
-        <motion.p
-          className="text-ink-secondary text-lg max-w-2xl mx-auto"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
+          {t.booking.headline}
+        </h2>
+        <p
+          className={clsx(
+            "text-ink-secondary text-lg max-w-2xl mx-auto anim-fade-up",
+            isInView && "in-view"
+          )}
+          style={{ transitionDelay: "0.1s" }}
         >
-          {data.subheadline}
-        </motion.p>
+          {t.booking.subheadline}
+        </p>
       </div>
 
-      {/* ── Embed Mode ────────────────────────────────────── */}
       {data.mode === "embed" && (
-        <motion.div
-          className="relative w-full max-w-3xl mx-auto rounded-2xl overflow-hidden border border-brand-100 bg-white shadow-sm"
-          variants={scaleIn}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
+        <div
+          className={clsx(
+            "relative w-full max-w-3xl mx-auto rounded-2xl overflow-hidden border border-brand-100 bg-white shadow-sm anim-scale-in",
+            isInView && "in-view"
+          )}
         >
           <iframe
             src={data.url}
@@ -131,19 +101,17 @@ export function BookingSection({ data }: BookingSectionProps) {
             className="w-full min-h-[580px] sm:min-h-[660px]"
             loading="lazy"
           />
-        </motion.div>
+        </div>
       )}
 
-      {/* ── Popup Mode ────────────────────────────────────── */}
       {data.mode === "popup" && (
-        <motion.div
-          className="flex flex-col items-center gap-6"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportConfig}
+        <div
+          className={clsx(
+            "flex flex-col items-center gap-6 anim-fade-up",
+            isInView && "in-view"
+          )}
+          style={{ transitionDelay: "0.2s" }}
         >
-          {/* Decorative calendar icon */}
           <div className="w-20 h-20 rounded-2xl bg-brand-50 border border-brand-100 flex items-center justify-center">
             <Icon name="clock" className="w-9 h-9 text-brand-600" />
           </div>
@@ -168,10 +136,7 @@ export function BookingSection({ data }: BookingSectionProps) {
             </svg>
             {t.booking.ctaButton}
           </Button>
-
-          {/* Subtle trust line */}
-          {/* <p className="text-xs text-ink-muted">{t.booking.trustLine}</p> */}
-        </motion.div>
+        </div>
       )}
     </SectionWrapper>
   );

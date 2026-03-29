@@ -8,19 +8,48 @@
     "contact": "Contact"
   },
   "hero": {
-    "ctaText": "Book a Consultation",
+    "headline": "Supporting Your Recovery Every Step of the Way",
+    "subheadline": "Expert injury rehabilitation and sports physiotherapy in Limassol",
+    "decorativeLabel": "Expert Physiotherapy",
+    "ctaText": "Book Your Assessment",
     "secondaryCtaText": "Our Services"
   },
   "about": {
-    "sectionLabel": "About Us"
+    "sectionLabel": "About Us",
+    "headline": "We Don't Just Treat Pain — We Fix What Caused It",
+    "description": "Multiple patients have come to us after being told surgery was their only option — and left fully recovered without it. Our approach is built on identifying the root cause of your injury, designing a structured rehab plan with clear progression, and getting you back to the activities you love. Whether you're an athlete preparing for competition or someone who just wants to live without pain, every session has purpose, every exercise has a reason, and every patient is treated as a human being — not a number.",
+    "feature-clipboard-title": "Root Cause, Not Symptoms",
+    "feature-clipboard-desc": "We identify what's actually driving your pain and build a treatment plan around it — not a generic exercise sheet.",
+    "feature-user-title": "Structured Rehab Plans",
+    "feature-user-desc": "Every session has clear goals and progression. You'll understand exactly where you are and what comes next.",
+    "feature-heart-title": "Surgery Isn't Always the Answer",
+    "feature-heart-desc": "Many of our patients recovered fully after being told they needed surgery. We explore every option before the operating table.",
+    "therapistTitle": "Lead Physiotherapist",
+    "therapistBio": "Specialising in sports injury rehabilitation, post-surgical recovery, and strength & conditioning for athletes."
   },
   "services": {
     "sectionLabel": "Our Services",
+    "headline": "Specialised Treatment for Real Injuries",
+    "subheadline": "From post-surgery knee rehab to getting fighters back in the ring — every program is built around your specific injury, your body, and your goals.",
     "perSession": "per session",
-    "bookNow": "Book Now"
+    "bookNow": "Book Now",
+    "sports-rehab-title": "Sports Injury Rehabilitation",
+    "sports-rehab-desc": "Structured rehab for ACL tears, meniscus injuries, ligament damage, and muscle tears. Return to sport stronger and more resilient.",
+    "surgery-avoidance-title": "Surgery Prevention & Alternative Rehab",
+    "surgery-avoidance-desc": "Multiple patients came to us facing surgery and recovered fully without it. We explore every evidence-based option first.",
+    "post-surgical-title": "Post-Surgery Recovery",
+    "post-surgical-desc": "Guided rehabilitation following ACL, SLAP, spinal, and joint surgery. Phased progression from day one to full function.",
+    "back-pain-title": "Back & Disc Injury Treatment",
+    "back-pain-desc": "Effective treatment for disc bulges, spondylolisthesis, nerve pain, and chronic lower back conditions — without relying on painkillers.",
+    "combat-sports-title": "Combat Sports & Fighter Rehab",
+    "combat-sports-desc": "Sport-specific rehab and S&C for MMA, BJJ, and combat athletes. Get back to training — not just pain-free, but fight-ready.",
+    "strength-conditioning-title": "Strength & Conditioning",
+    "strength-conditioning-desc": "Performance-focused programs that combine rehab, mobility, strength, and sport-specific conditioning to prevent future injuries."
   },
   "reviews": {
     "sectionLabel": "Testimonials",
+    "headline": "Trusted by 127+ Patients in Limassol",
+    "subheadline": "Real results from real people — from avoiding surgery to returning to competition.",
     "basedOn": "Based on",
     "reviews": "reviews",
     "leaveReview": "Leave a Review",
@@ -29,16 +58,32 @@
   },
   "location": {
     "sectionLabel": "Find Us",
+    "headline": "Visit Our Clinic",
     "openingHours": "Opening Hours",
-    "getDirections": "Get Directions"
+    "getDirections": "Get Directions",
+    "mon-fri": "Monday – Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "closed": "Closed",
+    "parking": "Free parking available behind the building."
   },
   "therapist": {
     "sectionLabel": "Your Specialist",
+    "headline": "Meet Marios Liasides",
+    "title": "Lead Physiotherapist & Sports Rehab Specialist",
+    "bio": "Marios specialises in getting people back to full function — whether that's a professional fighter returning to competition, a runner overcoming a stress injury, or someone recovering from spinal surgery. His patients consistently highlight one thing: he treats the root cause, not just the symptoms. With a structured, evidence-based approach to rehabilitation and a genuine investment in every patient's recovery, Marios has helped athletes avoid surgery, overcome chronic pain, and return to performance stronger than before their injury.",
     "credentials": "Credentials & Education",
-    "yearsExperience": "years of experience"
+    "credential1": "BSc Physiotherapy",
+    "credential2": "Sports Injury Rehabilitation Specialist",
+    "credential3": "Strength & Conditioning Coach",
+    "credential4": "Experience with ACL, SLAP, spinal, and combat sports injuries",
+    "yearsExperience": "years of experience",
+    "ctaText": "Book a Session With Marios"
   },
   "booking": {
     "sectionLabel": "Book an Appointment",
+    "headline": "Book Your Appointment",
+    "subheadline": "Choose a time that works for you. Consultations are 30 minutes.",
     "ctaButton": "Schedule Now",
     "iframeTitle": "Schedule an Appointment",
     "popupDescription": "Select a convenient time and we'll confirm your appointment within minutes.",
@@ -46,6 +91,8 @@
   },
   "contact": {
     "sectionLabel": "Contact",
+    "headline": "Get in Touch",
+    "subheadline": "Ready to start your recovery? Reach out today.",
     "name": "Full Name",
     "email": "Email Address",
     "phone": "Phone Number",
@@ -56,6 +103,8 @@
     "orEmailUs": "Or email us"
   },
   "footer": {
+    "description": "Expert physiotherapy in Limassol specialising in injury rehabilitation, post-surgery recovery, and sports performance.",
+    "copyright": "© 6 Liasides Physio. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "builtBy": "Built by"
@@ -64,5 +113,45 @@
     "loading": "Loading...",
     "error": "Something went wrong",
     "close": "Close"
+  },
+  "legal": {
+    "backToHome": "Back to Home",
+    "questions": "If you have any questions about this policy, please contact us at"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: March 2026",
+    "s1Title": "1. Introduction",
+    "s1Content": "Liasides Physio (\"we\", \"us\", \"our\") is committed to protecting and respecting your privacy. This Privacy Policy explains how we collect, use, store, and protect your personal data when you visit our website or use our physiotherapy services.\n\nWe operate in accordance with the General Data Protection Regulation (GDPR) and the Cyprus Data Protection Law (Law 125(I)/2018).",
+    "s2Title": "2. Information We Collect",
+    "s2Content": "We may collect the following personal data:\n\n• Full name\n• Phone number and email address\n• Physical address\n• Medical history and injury details (shared during consultations)\n• Appointment booking information\n• Website usage data (cookies, IP address, browser type)\n\nWe do not collect sensitive personal data beyond what is necessary for providing physiotherapy services.",
+    "s3Title": "3. How We Use Your Information",
+    "s3Content": "Your personal data is used for the following purposes:\n\n• Scheduling and managing your appointments\n• Providing physiotherapy treatment and follow-up care\n• Communicating with you about your treatment plan\n• Responding to your enquiries via phone, email, or contact forms\n• Improving our website and services\n• Complying with legal and regulatory obligations",
+    "s4Title": "4. Data Sharing",
+    "s4Content": "We do not sell or rent your personal data to third parties. We may share your data only in the following circumstances:\n\n• With healthcare professionals involved in your care (with your consent)\n• With service providers who help us operate our website (e.g., hosting, analytics)\n• When required by law or regulatory authorities\n\nAll third-party service providers are bound by data protection agreements.",
+    "s5Title": "5. Data Retention",
+    "s5Content": "We retain your personal data only for as long as necessary to fulfil the purposes described in this policy. Medical records are retained in accordance with Cyprus healthcare regulations. You may request deletion of your data at any time, subject to legal retention requirements.",
+    "s6Title": "6. Your Rights",
+    "s6Content": "Under GDPR and Cyprus data protection law, you have the right to:\n\n• Access the personal data we hold about you\n• Request correction of inaccurate data\n• Request deletion of your data (\"right to be forgotten\")\n• Restrict or object to processing of your data\n• Request data portability\n• Withdraw consent at any time\n\nTo exercise any of these rights, please contact us using the details below.",
+    "s7Title": "7. Cookies",
+    "s7Content": "Our website uses cookies to improve your browsing experience. These include essential cookies required for the website to function and analytics cookies that help us understand how visitors use the site. You can manage your cookie preferences through your browser settings."
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: March 2026",
+    "s1Title": "1. Overview",
+    "s1Content": "These Terms of Service govern your use of the Liasides Physio website and our physiotherapy services. By accessing our website or booking an appointment, you agree to these terms.\n\nLiasides Physio is a physiotherapy clinic registered and operating in Limassol, Cyprus.",
+    "s2Title": "2. Our Services",
+    "s2Content": "We provide physiotherapy, sports rehabilitation, post-surgery recovery, strength and conditioning, and related services. All treatments are provided by qualified physiotherapists.\n\nThe information on our website is for general informational purposes and does not constitute medical advice. Always consult a qualified healthcare professional for specific medical conditions.",
+    "s3Title": "3. Appointments & Cancellations",
+    "s3Content": "Appointments can be booked through our website, by phone, or via our online booking system.\n\n• Please arrive 5 minutes before your scheduled appointment\n• Cancellations must be made at least 24 hours in advance\n• Late cancellations or missed appointments may be subject to a cancellation fee\n• We reserve the right to reschedule appointments when necessary, with reasonable notice",
+    "s4Title": "4. Payments",
+    "s4Content": "Payment is due at the time of service unless alternative arrangements have been agreed upon. We accept cash, card, and bank transfer.\n\nPrices for our services are listed on our website and may be updated from time to time. Any price changes will not affect appointments already booked at the previous rate.",
+    "s5Title": "5. Limitation of Liability",
+    "s5Content": "While we strive to provide the highest standard of care, physiotherapy outcomes vary between individuals. We do not guarantee specific results from our treatments.\n\nLiasides Physio shall not be liable for any indirect, incidental, or consequential damages arising from the use of our services or website, except where required by law.",
+    "s6Title": "6. Intellectual Property",
+    "s6Content": "All content on this website — including text, images, logos, and design — is the property of Liasides Physio or its licensors. You may not reproduce, distribute, or use any content without our written permission.",
+    "s7Title": "7. Changes to These Terms",
+    "s7Content": "We may update these Terms of Service from time to time. Changes will be posted on this page with an updated revision date. Continued use of our website or services after changes are posted constitutes acceptance of the revised terms."
   }
 }

@@ -91,19 +91,19 @@ git remote add origin https://github.com/your-agency/new-client.git
 
 This is the **only file you need to change** for basic client setup. Update:
 
-| Field | What to change |
-|-------|---------------|
-| `business.name` | Client business name |
-| `business.tagline` | Their tagline |
-| `seo.*` | Page title, description, keywords |
-| `hero.*` | Hero headline, subheadline, CTA |
-| `about.*` | About copy, features, therapist/owner info |
-| `services.items[]` | All services with prices |
-| `reviews.items[]` | Client testimonials |
-| `location.*` | Address, coordinates, hours |
-| `contact.*` | Phone, email, WhatsApp |
-| `social.*` | Social media URLs |
-| `footer.builtBy` | Your agency link |
+| Field              | What to change                             |
+| ------------------ | ------------------------------------------ |
+| `business.name`    | Client business name                       |
+| `business.tagline` | Their tagline                              |
+| `seo.*`            | Page title, description, keywords          |
+| `hero.*`           | Hero headline, subheadline, CTA            |
+| `about.*`          | About copy, features, therapist/owner info |
+| `services.items[]` | All services with prices                   |
+| `reviews.items[]`  | Client testimonials                        |
+| `location.*`       | Address, coordinates, hours                |
+| `contact.*`        | Phone, email, WhatsApp                     |
+| `social.*`         | Social media URLs                          |
+| `footer.builtBy`   | Your agency link                           |
 
 ### Step 3: Customize Colors (Optional)
 
@@ -114,6 +114,7 @@ Quick palette swap: replace the `brand` color scale with any scale from [tailwin
 ### Step 4: Add Images
 
 Replace placeholder images in `/public/images/`:
+
 - `hero-bg.jpg` — Hero background
 - `about.jpg` — About section image
 - `therapist.jpg` — Team member photo
@@ -147,7 +148,7 @@ Every push to `main` auto-deploys. That's it.
 ### Custom Domain
 
 1. In Vercel → Project → Settings → Domains
-2. Add client domain (e.g., `physiovita.com`)
+2. Add client domain (e.g., `liasidesphysio.com`)
 3. Update DNS: point CNAME to `cname.vercel-dns.com`
 
 ---
@@ -166,6 +167,7 @@ Every push to `main` auto-deploys. That's it.
 1. Copy `src/locales/en.json` → `src/locales/de.json`
 2. Translate all strings
 3. In `src/lib/i18n.tsx`:
+
    ```typescript
    import de from "@/locales/de.json";
 
@@ -179,11 +181,13 @@ Every push to `main` auto-deploys. That's it.
      de: de as Translations,
    };
    ```
+
 4. Update the `Locale` type in `src/lib/types.ts`
 
 ### Translating Business Content
 
 For full content translation, extend `site.json` with locale-specific overrides:
+
 ```json
 {
   "hero": {
@@ -203,6 +207,7 @@ Or use Sanity's built-in i18n plugin for CMS-managed translations.
 ### When to Migrate
 
 Move to Sanity when:
+
 - Client needs to edit content themselves
 - You have 10+ clients and want centralized management
 - You need scheduled publishing or draft previews
@@ -210,6 +215,7 @@ Move to Sanity when:
 ### How to Migrate
 
 1. **Set up Sanity Studio:**
+
    ```bash
    npx create-sanity@latest --template clean
    ```
@@ -239,6 +245,7 @@ Client fills form → AI populates site.json → Auto-deploy
    Collect: business name, tagline, services, address, phone, etc.
 
 2. **AI Processing** (OpenAI / Claude API):
+
    ```javascript
    // Generate site.json from form data
    const siteConfig = await generateSiteConfig(formData);
@@ -246,12 +253,14 @@ Client fills form → AI populates site.json → Auto-deploy
    ```
 
 3. **GitHub API** — Create repo from template:
+
    ```bash
    # Use GitHub's template repo API
    POST /repos/{template}/generate
    ```
 
 4. **Write site.json** to the new repo:
+
    ```bash
    # GitHub Contents API
    PUT /repos/{new-repo}/contents/src/data/site.json
@@ -260,16 +269,20 @@ Client fills form → AI populates site.json → Auto-deploy
 5. **Vercel auto-deploys** from the push
 
 #### Full pipeline (Node.js pseudocode):
+
 ```javascript
 async function onboardClient(formData) {
   // 1. Generate content
   const siteJson = await aiGenerateContent(formData);
 
   // 2. Create repo from template
-  const repo = await github.createFromTemplate('agency-template', formData.slug);
+  const repo = await github.createFromTemplate(
+    "agency-template",
+    formData.slug
+  );
 
   // 3. Push site.json
-  await github.updateFile(repo, 'src/data/site.json', JSON.stringify(siteJson));
+  await github.updateFile(repo, "src/data/site.json", JSON.stringify(siteJson));
 
   // 4. Vercel deploys automatically
   return `https://${formData.slug}.vercel.app`;
@@ -289,12 +302,12 @@ async function onboardClient(formData) {
 
 ### Lighthouse Targets
 
-| Metric | Target |
-|--------|--------|
-| Performance | 95+ |
-| Accessibility | 95+ |
-| Best Practices | 100 |
-| SEO | 100 |
+| Metric         | Target |
+| -------------- | ------ |
+| Performance    | 95+    |
+| Accessibility  | 95+    |
+| Best Practices | 100    |
+| SEO            | 100    |
 
 ---
 

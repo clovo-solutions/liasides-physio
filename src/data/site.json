@@ -204,7 +204,7 @@
     "headline": "Get in Touch",
     "subheadline": "Ready to start your recovery? Reach out today.",
     "phone": "+357 25 123 456",
-    "email": "info@physiovita.com",
+    "email": "info@liasidesphysio.com",
     "whatsapp": "+35725123456",
     "formFields": ["name", "email", "phone", "message"],
     "formSubmitText": "Send Message"
@@ -213,7 +213,7 @@
   "social": {
     "instagram": "https://www.instagram.com/reactive_liasides_physio/",
     "facebook": "https://www.facebook.com/p/Liasides-Physio-100063626286042/",
-    "linkedin": "https://linkedin.com/company/physiovita"
+    "linkedin": "https://linkedin.com/company/liasidesphysio"
   },
 
   "footer": {

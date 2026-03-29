@@ -16,7 +16,6 @@ export function Hero({ data }: HeroProps) {
 
   return (
     <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
-      {/* ── Background Image + Overlay ───────────────────── */}
       <div className="absolute inset-0">
         <Image
           src={data.backgroundImage}
@@ -27,17 +26,9 @@ export function Hero({ data }: HeroProps) {
           priority
           quality={85}
         />
-
-        {/* Top-heavy overlay — ensures navbar area is always readable */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-transparent" />
-
-        {/* Bottom fade into site background */}
         <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent" />
-
-        {/* Center darken for text area */}
         <div className="absolute inset-0 bg-black/25" />
-
-        {/* Grain texture */}
         <div
           className="absolute inset-0 opacity-[0.04]"
           style={{
@@ -46,37 +37,35 @@ export function Hero({ data }: HeroProps) {
         />
       </div>
 
-      {/* ── Content ────────────────────────────────────────── */}
       <motion.div
         className="relative z-10 text-center px-5 sm:px-8 max-w-4xl mx-auto pt-24 pb-8 sm:pt-20 sm:pb-12"
         variants={staggerContainer}
         initial="hidden"
         animate="visible"
       >
-        {/* Decorative label */}
         <motion.div
           variants={fadeUp}
           className="flex items-center justify-center gap-3 mb-6 sm:mb-8"
         >
           <span className="block w-8 h-px bg-white/40" />
           <span className="text-xs font-semibold tracking-[0.25em] uppercase text-white/70">
-            {data.subheadline.split(" ").slice(0, 3).join(" ")}
+            {t.hero.decorativeLabel}
           </span>
           <span className="block w-8 h-px bg-white/40" />
         </motion.div>
 
         <motion.h1
           variants={fadeUp}
-          className="font-display text-display-xl font-semibold text-white text-balance leading-[1.08] mb-6 sm:mb-8 drop-shadow-lg"
+          className="font-display text-5xl sm:text-6xl md:text-7xl  font-semibold text-white leading-tight mb-24 sm:mb-8 drop-shadow-lg"
         >
-          {data.headline}
+          {t.hero.headline}
         </motion.h1>
 
         <motion.p
           variants={fadeUp}
           className="text-lg sm:text-xl text-white/85 max-w-2xl mx-auto mb-8 sm:mb-10 text-balance leading-relaxed drop-shadow-sm"
         >
-          {data.subheadline}
+          {t.hero.subheadline}
         </motion.p>
 
         <motion.div
@@ -91,7 +80,6 @@ export function Hero({ data }: HeroProps) {
           </Button>
         </motion.div>
 
-        {/* ── Scroll indicator — hidden on mobile ────────── */}
         <motion.div
           variants={fadeUp}
           className="mt-12 sm:mt-16 justify-center hidden sm:flex"
