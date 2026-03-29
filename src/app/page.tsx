@@ -33,8 +33,8 @@ export default function Home() {
       <main>
         <Hero data={data.hero} />
         <About data={data.about} />
-        <Services data={data.services} />
         <Therapist data={data.therapist} />
+        <Services data={data.services} />
         <Reviews data={data.reviews} />
         <BookingSection data={data.booking} />
         <Location data={data.location} />
