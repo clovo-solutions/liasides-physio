@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "reviews": "Reviews",
+    "location": "Location",
+    "contact": "Contact"
+  },
+  "hero": {
+    "ctaText": "Book a Consultation",
+    "secondaryCtaText": "Our Services"
+  },
+  "about": {
+    "sectionLabel": "About Us"
+  },
+  "services": {
+    "sectionLabel": "Our Services",
+    "perSession": "per session",
+    "bookNow": "Book Now"
+  },
+  "reviews": {
+    "sectionLabel": "Testimonials",
+    "basedOn": "Based on",
+    "reviews": "reviews",
+    "leaveReview": "Leave a Review"
+  },
+  "location": {
+    "sectionLabel": "Find Us",
+    "openingHours": "Opening Hours",
+    "getDirections": "Get Directions"
+  },
+  "therapist": {
+    "sectionLabel": "Your Specialist",
+    "credentials": "Credentials & Education",
+    "yearsExperience": "years of experience"
+  },
+  "booking": {
+    "sectionLabel": "Book an Appointment",
+    "ctaButton": "Schedule Now",
+    "iframeTitle": "Schedule an Appointment",
+    "popupDescription": "Select a convenient time and we'll confirm your appointment within minutes.",
+    "trustLine": "Free cancellation up to 24 hours before your session"
+  },
+  "contact": {
+    "sectionLabel": "Contact",
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "message": "Your Message",
+    "submit": "Send Message",
+    "success": "Thank you! We'll get back to you shortly.",
+    "orCallUs": "Or call us directly",
+    "orEmailUs": "Or email us"
+  },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "builtBy": "Built by"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "close": "Close"
+  }
+}

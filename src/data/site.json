@@ -1,0 +1,230 @@
+{
+  "business": {
+    "name": "PhysioVita",
+    "tagline": "Movement is Medicine",
+    "description": "Expert physiotherapy care tailored to your recovery journey.",
+    "type": "physiotherapy",
+    "foundedYear": 2018,
+    "logo": "/images/logo.svg",
+    "favicon": "/images/favicon.ico"
+  },
+
+  "seo": {
+    "title": "PhysioVita — Expert Physiotherapy & Rehabilitation",
+    "description": "Professional physiotherapy services in Limassol. Sports rehabilitation, chronic pain management, and post-surgical recovery.",
+    "keywords": ["physiotherapy", "rehabilitation", "sports injury", "Limassol"],
+    "ogImage": "/images/og-image.jpg",
+    "url": "https://physiovita.example.com"
+  },
+
+  "hero": {
+    "headline": "Restore Your Body's Full Potential",
+    "subheadline": "Evidence-based physiotherapy that gets you back to the life you love.",
+    "ctaText": "Book a Consultation",
+    "ctaLink": "#booking",
+    "secondaryCtaText": "Our Services",
+    "secondaryCtaLink": "#services",
+    "backgroundImage": "/images/hero-bg.jpg"
+  },
+
+  "about": {
+    "headline": "Personalized Care, Proven Results",
+    "description": "With over 15 years of clinical experience, we combine hands-on expertise with the latest evidence-based techniques. Every treatment plan is uniquely crafted to your body, your goals, and your lifestyle.",
+    "features": [
+      {
+        "title": "Evidence-Based",
+        "description": "Treatments grounded in the latest clinical research.",
+        "icon": "clipboard"
+      },
+      {
+        "title": "Personalized Plans",
+        "description": "Every program is tailored to your specific needs.",
+        "icon": "user"
+      },
+      {
+        "title": "Holistic Approach",
+        "description": "We treat the root cause, not just the symptoms.",
+        "icon": "heart"
+      }
+    ],
+    "image": "/images/about.jpg",
+    "therapist": {
+      "name": "Dr. Elena Papadopoulos",
+      "title": "Lead Physiotherapist, MSc",
+      "bio": "Specializing in sports rehabilitation and chronic pain management with 15+ years of experience.",
+      "image": "/images/therapist.jpg"
+    }
+  },
+
+  "services": {
+    "headline": "What We Offer",
+    "subheadline": "Comprehensive care for every stage of recovery.",
+    "items": [
+      {
+        "id": "sports-rehab",
+        "title": "Sports Rehabilitation",
+        "description": "Return to peak performance with targeted recovery programs for athletes of all levels.",
+        "icon": "activity",
+        "price": "€60"
+      },
+      {
+        "id": "chronic-pain",
+        "title": "Chronic Pain Management",
+        "description": "Long-term strategies to manage and reduce persistent pain conditions.",
+        "icon": "shield",
+        "price": "€55"
+      },
+      {
+        "id": "post-surgical",
+        "title": "Post-Surgical Recovery",
+        "description": "Guided rehabilitation following orthopedic and joint surgery.",
+        "icon": "plus-circle",
+        "price": "€65"
+      },
+      {
+        "id": "manual-therapy",
+        "title": "Manual Therapy",
+        "description": "Hands-on techniques to restore joint mobility and reduce tissue tension.",
+        "icon": "hand",
+        "price": "€50"
+      },
+      {
+        "id": "posture-correction",
+        "title": "Posture Correction",
+        "description": "Assessment and corrective exercises for workplace and lifestyle-related posture issues.",
+        "icon": "align-center",
+        "price": "€45"
+      },
+      {
+        "id": "dry-needling",
+        "title": "Dry Needling",
+        "description": "Targeted trigger point therapy for muscle pain and tightness relief.",
+        "icon": "target",
+        "price": "€55"
+      }
+    ]
+  },
+
+  "reviews": {
+    "headline": "What Our Patients Say",
+    "subheadline": "Real results from real people.",
+    "averageRating": 4.9,
+    "totalReviews": 127,
+    "googleReviewsUrl": "https://g.page/physiovita/review",
+    "items": [
+      {
+        "id": "review-1",
+        "name": "Maria K.",
+        "rating": 5,
+        "text": "After months of back pain, I finally found relief. The treatment plan was thorough and the results were incredible.",
+        "date": "2024-11-15",
+        "source": "google"
+      },
+      {
+        "id": "review-2",
+        "name": "Andreas P.",
+        "rating": 5,
+        "text": "Recovered from my ACL surgery faster than expected. Professional, knowledgeable, and genuinely caring.",
+        "date": "2024-10-22",
+        "source": "google"
+      },
+      {
+        "id": "review-3",
+        "name": "Sophie M.",
+        "rating": 5,
+        "text": "The best physiotherapy experience I've had. Every session is purposeful and I can feel the progress week by week.",
+        "date": "2024-09-30",
+        "source": "google"
+      },
+      {
+        "id": "review-4",
+        "name": "Dmitri V.",
+        "rating": 4,
+        "text": "Very professional clinic. The therapist explained everything clearly and the exercises really helped with my shoulder.",
+        "date": "2024-08-18",
+        "source": "google"
+      }
+    ]
+  },
+  "therapist": {
+    "headline": "Meet Your Therapist",
+    "name": "Dr. Elena Papadopoulos",
+    "title": "Senior Physiotherapist, MSc",
+    "bio": "With over 15 years of hands-on clinical experience, Dr. Papadopoulos combines evidence-based manual therapy with a deeply personalized approach. Trained in London and Athens, she specializes in sports rehabilitation, chronic pain management, and post-surgical recovery — helping hundreds of patients reclaim movement and confidence in their bodies.",
+    "credentials": [
+      "MSc Physiotherapy — King's College London",
+      "BSc Sports Science — University of Athens",
+      "Certified Dry Needling Practitioner",
+      "Member, World Confederation for Physical Therapy"
+    ],
+    "image": "/images/therapist.jpg",
+    "ctaText": "Book a Session",
+    "ctaLink": "#booking"
+  },
+
+  "location": {
+    "headline": "Visit Our Clinic",
+    "address": {
+      "street": "42 Makarios Avenue",
+      "city": "Limassol",
+      "postalCode": "3020",
+      "country": "Cyprus"
+    },
+    "coordinates": {
+      "lat": 34.6786,
+      "lng": 33.0413
+    },
+    "mapZoom": 15,
+    "hours": [
+      { "days": "Monday – Friday", "time": "08:00 – 19:00" },
+      { "days": "Saturday", "time": "09:00 – 14:00" },
+      { "days": "Sunday", "time": "Closed" }
+    ],
+    "parking": "Free parking available behind the building."
+  },
+
+
+  "booking": {
+    "enabled": true,
+    "type": "calendly",
+    "url": "https://calendly.com/your-link",
+    "mode": "popup",
+    "headline": "Book Your Appointment",
+    "subheadline": "Choose a time that works for you. Consultations are 30 minutes."
+  },
+
+  "contact": {
+    "headline": "Get in Touch",
+    "subheadline": "Ready to start your recovery? Reach out today.",
+    "phone": "+357 25 123 456",
+    "email": "info@physiovita.com",
+    "whatsapp": "+35725123456",
+    "formFields": ["name", "email", "phone", "message"],
+    "formSubmitText": "Send Message"
+  },
+
+  "social": {
+    "instagram": "https://instagram.com/physiovita",
+    "facebook": "https://facebook.com/physiovita",
+    "linkedin": "https://linkedin.com/company/physiovita"
+  },
+
+  "footer": {
+    "copyright": "© 2024 PhysioVita. All rights reserved.",
+    "privacyPolicyUrl": "/privacy",
+    "termsUrl": "/terms",
+    "builtBy": {
+      "name": "YourAgency",
+      "url": "https://youragency.com"
+    }
+  },
+
+  "theme": {
+    "primaryColor": "#2A9D8F",
+    "accentColor": "#E9C46A",
+    "surfaceColor": "#faf9f7",
+    "inkColor": "#1c1917",
+    "fontDisplay": "Playfair Display",
+    "fontBody": "DM Sans"
+  }
+}

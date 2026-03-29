@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap");
+
+@layer base {
+  :root {
+    /* ── Brand palette (defaults — overridden by ThemeProvider) ──
+       These fallbacks ensure the site renders correctly before
+       JS hydration. ThemeProvider replaces them at runtime from
+       site.json → theme.primaryColor.                              */
+    --brand-50: 246 247 244;
+    --brand-100: 232 235 227;
+    --brand-200: 212 218 200;
+    --brand-300: 181 192 163;
+    --brand-400: 150 166 126;
+    --brand-500: 122 142 99;
+    --brand-600: 95 114 76;
+    --brand-700: 75 90 61;
+    --brand-800: 62 74 52;
+    --brand-900: 53 63 46;
+    --brand-950: 26 33 22;
+
+    /* ── Accent palette (defaults) ─────────────────────────────── */
+    --accent-50: 254 252 243;
+    --accent-100: 252 247 218;
+    --accent-200: 248 238 181;
+    --accent-300: 243 224 138;
+    --accent-400: 233 196 106;
+    --accent-500: 210 168 75;
+    --accent-600: 180 136 51;
+    --accent-700: 143 104 41;
+    --accent-800: 117 85 38;
+    --accent-900: 97 71 34;
+    --accent-950: 56 39 18;
+
+    /* ── Surface & ink ─────────────────────────────────────────── */
+    --surface: 250 249 247;
+    --surface-warm: 245 243 239;
+    --surface-muted: 237 234 228;
+    --ink: 28 25 23;
+    --ink-secondary: 87 83 78;
+    --ink-muted: 168 162 158;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-surface text-ink font-body;
+  }
+
+  ::selection {
+    @apply bg-brand-200 text-brand-900;
+  }
+
+  /* ── Subtle scrollbar ──────────────────────────────────── */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-surface;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-brand-300 rounded-full;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-5 sm:px-8 lg:px-16 py-section;
+  }
+
+  .container-narrow {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}

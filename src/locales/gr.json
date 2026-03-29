@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "Αρχική",
+    "about": "Σχετικά",
+    "services": "Υπηρεσίες",
+    "reviews": "Κριτικές",
+    "location": "Τοποθεσία",
+    "contact": "Επικοινωνία"
+  },
+  "hero": {
+    "ctaText": "Κλείστε Ραντεβού",
+    "secondaryCtaText": "Οι Υπηρεσίες μας"
+  },
+  "about": {
+    "sectionLabel": "Σχετικά με Εμάς"
+  },
+  "services": {
+    "sectionLabel": "Οι Υπηρεσίες μας",
+    "perSession": "ανά συνεδρία",
+    "bookNow": "Κλείστε Ραντεβού"
+  },
+  "reviews": {
+    "sectionLabel": "Μαρτυρίες",
+    "basedOn": "Βασισμένο σε",
+    "reviews": "κριτικές",
+    "leaveReview": "Αφήστε μια Κριτική"
+  },
+  "location": {
+    "sectionLabel": "Βρείτε μας",
+    "openingHours": "Ωράριο Λειτουργίας",
+    "getDirections": "Οδηγίες"
+  },
+  "therapist": {
+    "sectionLabel": "Ο Ειδικός σας",
+    "credentials": "Προσόντα & Εκπαίδευση",
+    "yearsExperience": "χρόνια εμπειρίας"
+  },
+  "booking": {
+    "sectionLabel": "Κλείστε Ραντεβού",
+    "ctaButton": "Προγραμματίστε Τώρα",
+    "iframeTitle": "Κλείστε Ραντεβού",
+    "popupDescription": "Επιλέξτε μια βολική ώρα και θα επιβεβαιώσουμε το ραντεβού σας μέσα σε λίγα λεπτά.",
+    "trustLine": "Δωρεάν ακύρωση έως 24 ώρες πριν τη συνεδρία σας"
+  },
+  "contact": {
+    "sectionLabel": "Επικοινωνία",
+    "name": "Ονοματεπώνυμο",
+    "email": "Ηλεκτρονικό Ταχυδρομείο",
+    "phone": "Τηλέφωνο",
+    "message": "Το Μήνυμά σας",
+    "submit": "Αποστολή",
+    "success": "Ευχαριστούμε! Θα επικοινωνήσουμε σύντομα.",
+    "orCallUs": "Ή καλέστε μας",
+    "orEmailUs": "Ή στείλτε μας email"
+  },
+  "footer": {
+    "privacy": "Πολιτική Απορρήτου",
+    "terms": "Όροι Χρήσης",
+    "builtBy": "Κατασκευή από"
+  },
+  "common": {
+    "loading": "Φόρτωση...",
+    "error": "Κάτι πήγε στραβά",
+    "close": "Κλείσιμο"
+  }
+}

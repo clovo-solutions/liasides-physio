@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "Главная",
+    "about": "О нас",
+    "services": "Услуги",
+    "reviews": "Отзывы",
+    "location": "Адрес",
+    "contact": "Контакты"
+  },
+  "hero": {
+    "ctaText": "Записаться на приём",
+    "secondaryCtaText": "Наши услуги"
+  },
+  "about": {
+    "sectionLabel": "О нас"
+  },
+  "services": {
+    "sectionLabel": "Наши услуги",
+    "perSession": "за сеанс",
+    "bookNow": "Записаться"
+  },
+  "reviews": {
+    "sectionLabel": "Отзывы",
+    "basedOn": "На основе",
+    "reviews": "отзывов",
+    "leaveReview": "Оставить отзыв"
+  },
+  "location": {
+    "sectionLabel": "Как нас найти",
+    "openingHours": "Часы работы",
+    "getDirections": "Маршрут"
+  },
+  "therapist": {
+    "sectionLabel": "Ваш специалист",
+    "credentials": "Квалификация и образование",
+    "yearsExperience": "лет опыта"
+  },
+  "booking": {
+    "sectionLabel": "Запись на приём",
+    "ctaButton": "Записаться сейчас",
+    "iframeTitle": "Запись на приём",
+    "popupDescription": "Выберите удобное время, и мы подтвердим вашу запись в течение нескольких минут.",
+    "trustLine": "Бесплатная отмена за 24 часа до сеанса"
+  },
+  "contact": {
+    "sectionLabel": "Контакты",
+    "name": "Полное имя",
+    "email": "Электронная почта",
+    "phone": "Телефон",
+    "message": "Ваше сообщение",
+    "submit": "Отправить",
+    "success": "Спасибо! Мы свяжемся с вами в ближайшее время.",
+    "orCallUs": "Или позвоните нам",
+    "orEmailUs": "Или напишите нам"
+  },
+  "footer": {
+    "privacy": "Политика конфиденциальности",
+    "terms": "Условия использования",
+    "builtBy": "Сделано"
+  },
+  "common": {
+    "loading": "Загрузка...",
+    "error": "Что-то пошло не так",
+    "close": "Закрыть"
+  }
+}
