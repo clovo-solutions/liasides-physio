@@ -23,7 +23,9 @@
     "sectionLabel": "Μαρτυρίες",
     "basedOn": "Βασισμένο σε",
     "reviews": "κριτικές",
-    "leaveReview": "Αφήστε μια Κριτική"
+    "leaveReview": "Αφήστε μια Κριτική",
+    "showMore": "Περισσότερα",
+    "showLess": "Λιγότερα"
   },
   "location": {
     "sectionLabel": "Βρείτε μας",

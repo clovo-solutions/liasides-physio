@@ -15,7 +15,11 @@ export function Services({ data }: ServicesProps) {
   const { t } = useI18n();
 
   return (
-    <SectionWrapper id="services" label={t.services.sectionLabel} background="warm">
+    <SectionWrapper
+      id="services"
+      label={t.services.sectionLabel}
+      background="warm"
+    >
       <div className="text-center mb-14">
         <h2 className="font-display text-display-lg font-semibold text-brand-900 mb-4 text-balance">
           {data.headline}
@@ -38,7 +42,7 @@ export function Services({ data }: ServicesProps) {
             variants={fadeUp}
             whileHover={{ y: -4 }}
             transition={{ duration: 0.25 }}
-            className="group relative bg-white rounded-2xl border border-brand-100 p-6 hover:shadow-lg hover:border-brand-200 transition-all duration-300 cursor-default"
+            className="group relative bg-white rounded-2xl border border-brand-100 p-6 hover:shadow-lg hover:border-brand-200 transition-all duration-300 cursor-default flex flex-col"
           >
             {/* Icon */}
             <div className="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center text-brand-600 mb-5 group-hover:bg-brand-100 group-hover:text-brand-700 transition-colors">
@@ -53,12 +57,14 @@ export function Services({ data }: ServicesProps) {
               {service.description}
             </p>
 
-            {/* Price tag */}
-            <div className="flex items-center justify-between pt-4 border-t border-brand-50">
+            {/* Price tag pushed to bottom */}
+            <div className="mt-auto flex items-center justify-between pt-4 border-t border-brand-50">
               <span className="font-display text-xl font-semibold text-brand-700">
                 {service.price}
               </span>
-              <span className="text-xs text-ink-muted">{t.services.perSession}</span>
+              <span className="text-xs text-ink-muted">
+                {t.services.perSession}
+              </span>
             </div>
 
             {/* Hover accent */}

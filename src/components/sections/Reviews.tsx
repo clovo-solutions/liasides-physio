@@ -1,23 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, LayoutGroup } from "framer-motion";
 import { useI18n } from "@/lib/i18n";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { StarRating } from "@/components/ui/StarRating";
+import { ReviewCard } from "@/components/ui/ReviewCard";
 import { Icon } from "@/components/ui/Icon";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
 import type { ReviewsData } from "@/lib/types";
-
-/* ─────────────────────────────────────────────────────────
-   Reviews Section
-
-   Currently uses mock data from site.json.
-   Ready for Google Reviews API integration:
-
-   // Replace mock data with API call:
-   // const reviews = await fetchGoogleReviews(placeId);
-   // Map API response to ReviewItem[] shape.
-   ───────────────────────────────────────────────────────── */
 
 interface ReviewsProps {
   data: ReviewsData;
@@ -47,58 +37,28 @@ export function Reviews({ data }: ReviewsProps) {
       </div>
 
       {/* ── Review Cards ────────────────────────────────── */}
-      <motion.div
-        className="grid md:grid-cols-2 gap-5"
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="visible"
-        viewport={viewportConfig}
-      >
-        {data.items.map((review) => (
-          <motion.div
-            key={review.id}
-            variants={fadeUp}
-            className="bg-white rounded-2xl border border-brand-100 p-6 hover:shadow-md transition-shadow duration-300"
-          >
-            {/* Quote icon */}
-            <svg
-              className="w-8 h-8 text-brand-200 mb-4"
-              fill="currentColor"
-              viewBox="0 0 24 24"
+      <LayoutGroup>
+        <motion.div
+          className="grid md:grid-cols-2 gap-5"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportConfig}
+        >
+          {data.items.map((review) => (
+            <motion.div
+              key={review.id}
+              layout
+              variants={fadeUp}
+              transition={{
+                layout: { duration: 0.3, ease: [0.22, 1, 0.36, 1] },
+              }}
             >
-              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z" />
-            </svg>
-
-            <p className="text-ink-secondary leading-relaxed mb-5 italic">
-              &ldquo;{review.text}&rdquo;
-            </p>
-
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                {/* Avatar placeholder */}
-                <div className="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center text-brand-700 font-semibold text-sm">
-                  {review.name
-                    .split(" ")
-                    .map((n) => n[0])
-                    .join("")}
-                </div>
-                <div>
-                  <p className="font-medium text-brand-900 text-sm">
-                    {review.name}
-                  </p>
-                  <StarRating rating={review.rating} size="sm" />
-                </div>
-              </div>
-
-              {review.source === "google" && (
-                <span className="text-xs text-ink-muted bg-surface-warm px-2 py-1 rounded-md">
-                  Google
-                </span>
-              )}
-            </div>
-          </motion.div>
-        ))}
-      </motion.div>
+              <ReviewCard review={review} />
+            </motion.div>
+          ))}
+        </motion.div>
+      </LayoutGroup>
 
       {/* ── Leave a review CTA ──────────────────────────── */}
       <div className="text-center mt-10">

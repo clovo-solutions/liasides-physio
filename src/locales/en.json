@@ -23,7 +23,9 @@
     "sectionLabel": "Testimonials",
     "basedOn": "Based on",
     "reviews": "reviews",
-    "leaveReview": "Leave a Review"
+    "leaveReview": "Leave a Review",
+    "showMore": "Show more",
+    "showLess": "Show less"
   },
   "location": {
     "sectionLabel": "Find Us",

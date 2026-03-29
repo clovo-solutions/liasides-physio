@@ -23,7 +23,9 @@
     "sectionLabel": "Отзывы",
     "basedOn": "На основе",
     "reviews": "отзывов",
-    "leaveReview": "Оставить отзыв"
+    "leaveReview": "Оставить отзыв",
+    "showMore": "Показать больше",
+    "showLess": "Показать меньше"
   },
   "location": {
     "sectionLabel": "Как нас найти",

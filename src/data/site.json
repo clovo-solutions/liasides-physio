@@ -1,182 +1,189 @@
 {
   "business": {
-    "name": "PhysioVita",
-    "tagline": "Movement is Medicine",
-    "description": "Expert physiotherapy care tailored to your recovery journey.",
+    "name": "Liasides Physio",
+    "tagline": "Get Back to What You Love",
+    "description": "Expert physiotherapy in Limassol specialising in injury rehabilitation, post-surgery recovery, and sports performance.",
     "type": "physiotherapy",
-    "foundedYear": 2018,
+    "foundedYear": 2020,
     "logo": "/images/logo.svg",
     "favicon": "/images/favicon.ico"
   },
 
   "seo": {
-    "title": "PhysioVita — Expert Physiotherapy & Rehabilitation",
-    "description": "Professional physiotherapy services in Limassol. Sports rehabilitation, chronic pain management, and post-surgical recovery.",
-    "keywords": ["physiotherapy", "rehabilitation", "sports injury", "Limassol"],
+    "title": "Liasides Physio — Sports Injury & Rehab | Limassol",
+    "description": "Expert physiotherapy in Limassol, Cyprus. Specialising in injury rehab, post-surgery recovery, and helping athletes return to peak performance. Rated 4.9★ on Google.",
+    "keywords": [
+      "physiotherapy Limassol",
+      "sports injury rehab Cyprus",
+      "physiotherapist Limassol",
+      "ACL rehab Cyprus",
+      "lower back pain treatment Limassol",
+      "avoid surgery physiotherapy",
+      "Marios Liasides physio",
+      "strength and conditioning Limassol"
+    ],
     "ogImage": "/images/og-image.jpg",
-    "url": "https://physiovita.example.com"
+    "url": "https://liasides-physio.com"
   },
 
   "hero": {
-    "headline": "Restore Your Body's Full Potential",
-    "subheadline": "Evidence-based physiotherapy that gets you back to the life you love.",
-    "ctaText": "Book a Consultation",
+    "headline": "Your Path to Full Recovery and Optimal Strength.",
+    "subheadline": "Expert injury rehabilitation and sports physiotherapy in Limassol.",
+    "ctaText": "Book Your Assessment",
     "ctaLink": "#booking",
     "secondaryCtaText": "Our Services",
     "secondaryCtaLink": "#services",
     "backgroundImage": "/images/hero-bg.jpg"
   },
-
   "about": {
-    "headline": "Personalized Care, Proven Results",
-    "description": "With over 15 years of clinical experience, we combine hands-on expertise with the latest evidence-based techniques. Every treatment plan is uniquely crafted to your body, your goals, and your lifestyle.",
+    "headline": "We Don't Just Treat Pain — We Fix What Caused It",
+    "description": "Multiple patients have come to us after being told surgery was their only option — and left fully recovered without it. Our approach is built on identifying the root cause of your injury, designing a structured rehab plan with clear progression, and getting you back to the activities you love. Whether you're an athlete preparing for competition or someone who just wants to live without pain, every session has purpose, every exercise has a reason, and every patient is treated as a human being — not a number.",
     "features": [
       {
-        "title": "Evidence-Based",
-        "description": "Treatments grounded in the latest clinical research.",
+        "title": "Root Cause, Not Symptoms",
+        "description": "We identify what's actually driving your pain and build a treatment plan around it — not a generic exercise sheet.",
         "icon": "clipboard"
       },
       {
-        "title": "Personalized Plans",
-        "description": "Every program is tailored to your specific needs.",
+        "title": "Structured Rehab Plans",
+        "description": "Every session has clear goals and progression. You'll understand exactly where you are and what comes next.",
         "icon": "user"
       },
       {
-        "title": "Holistic Approach",
-        "description": "We treat the root cause, not just the symptoms.",
+        "title": "Surgery Isn't Always the Answer",
+        "description": "Many of our patients recovered fully after being told they needed surgery. We explore every option before the operating table.",
         "icon": "heart"
       }
     ],
     "image": "/images/about.jpg",
     "therapist": {
-      "name": "Dr. Elena Papadopoulos",
-      "title": "Lead Physiotherapist, MSc",
-      "bio": "Specializing in sports rehabilitation and chronic pain management with 15+ years of experience.",
+      "name": "Marios Liasides",
+      "title": "Lead Physiotherapist",
+      "bio": "Specialising in sports injury rehabilitation, post-surgical recovery, and strength & conditioning for athletes.",
       "image": "/images/therapist.jpg"
     }
   },
 
   "services": {
-    "headline": "What We Offer",
-    "subheadline": "Comprehensive care for every stage of recovery.",
+    "headline": "Specialised Treatment for Real Injuries",
+    "subheadline": "From post-surgery knee rehab to getting fighters back in the ring — every program is built around your specific injury, your body, and your goals.",
     "items": [
       {
         "id": "sports-rehab",
-        "title": "Sports Rehabilitation",
-        "description": "Return to peak performance with targeted recovery programs for athletes of all levels.",
+        "title": "Sports Injury Rehabilitation",
+        "description": "Structured rehab for ACL tears, meniscus injuries, ligament damage, and muscle tears. Return to sport stronger and more resilient.",
         "icon": "activity",
         "price": "€60"
       },
       {
-        "id": "chronic-pain",
-        "title": "Chronic Pain Management",
-        "description": "Long-term strategies to manage and reduce persistent pain conditions.",
+        "id": "surgery-avoidance",
+        "title": "Surgery Prevention & Alternative Rehab",
+        "description": "Multiple patients came to us facing surgery and recovered fully without it. We explore every evidence-based option first.",
         "icon": "shield",
-        "price": "€55"
+        "price": "€60"
       },
       {
         "id": "post-surgical",
-        "title": "Post-Surgical Recovery",
-        "description": "Guided rehabilitation following orthopedic and joint surgery.",
+        "title": "Post-Surgery Recovery",
+        "description": "Guided rehabilitation following ACL, SLAP, spinal, and joint surgery. Phased progression from day one to full function.",
         "icon": "plus-circle",
         "price": "€65"
       },
       {
-        "id": "manual-therapy",
-        "title": "Manual Therapy",
-        "description": "Hands-on techniques to restore joint mobility and reduce tissue tension.",
+        "id": "back-pain",
+        "title": "Back & Disc Injury Treatment",
+        "description": "Effective treatment for disc bulges, spondylolisthesis, nerve pain, and chronic lower back conditions — without relying on painkillers.",
         "icon": "hand",
-        "price": "€50"
-      },
-      {
-        "id": "posture-correction",
-        "title": "Posture Correction",
-        "description": "Assessment and corrective exercises for workplace and lifestyle-related posture issues.",
-        "icon": "align-center",
-        "price": "€45"
-      },
-      {
-        "id": "dry-needling",
-        "title": "Dry Needling",
-        "description": "Targeted trigger point therapy for muscle pain and tightness relief.",
-        "icon": "target",
         "price": "€55"
+      },
+      {
+        "id": "combat-sports",
+        "title": "Combat Sports & Fighter Rehab",
+        "description": "Sport-specific rehab and S&C for MMA, BJJ, and combat athletes. Get back to training — not just pain-free, but fight-ready.",
+        "icon": "target",
+        "price": "€60"
+      },
+      {
+        "id": "strength-conditioning",
+        "title": "Strength & Conditioning",
+        "description": "Performance-focused programs that combine rehab, mobility, strength, and sport-specific conditioning to prevent future injuries.",
+        "icon": "align-center",
+        "price": "€50"
       }
     ]
-  },
-
-  "reviews": {
-    "headline": "What Our Patients Say",
-    "subheadline": "Real results from real people.",
+  },"reviews": {
+    "headline": "Trusted by 127+ Patients in Limassol",
+    "subheadline": "Real results from real people — from avoiding surgery to returning to competition.",
     "averageRating": 4.9,
     "totalReviews": 127,
-    "googleReviewsUrl": "https://g.page/physiovita/review",
+    "googleReviewsUrl": "https://www.google.com/search?sca_esv=d22b1170cb5b1f6e&sxsrf=ANbL-n5HIdYm80dFk5ZyBlNvFzgawm7CZg:1774793768862&q=liasides-physio&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOZKwuZcqc5xl3CBNIa21UiwqUrcuWdWoy8lhHhLpm3ETdASCdXAWaetdTrysd1L-OkUilu8%3D&uds=ALYpb_n_EM_B_ErB9c5NX69H4GoWeQgtI5t9urjNkd7k81deydTu2y1buRrytgFXBvJb9kUuwZjLVXAeaMjveidEpopUVywxhJTaUwwcjkeAgvT6n_Bi7NE&sa=X&ved=2ahUKEwjw1JGBpsWTAxVWIRAIHTDnINgQ3PALegQIHBAE&biw=1344&bih=769&dpr=2.5",
     "items": [
       {
         "id": "review-1",
-        "name": "Maria K.",
+        "name": "Konstantinos G.",
         "rating": 5,
-        "text": "After months of back pain, I finally found relief. The treatment plan was thorough and the results were incredible.",
-        "date": "2024-11-15",
+        "text": "Doctors told me surgery might be my only option. After two months with Marios, I fully healed — no surgery, no pain. He doesn't just treat symptoms; he identifies the root cause and builds a proper plan. If you train MMA or Jiu Jitsu, his S&C will take you to another level. I feel stronger and more explosive than before the injury.",
+        "date": "2025-02-15",
         "source": "google"
       },
       {
         "id": "review-2",
-        "name": "Andreas P.",
+        "name": "Rebecca K.",
         "rating": 5,
-        "text": "Recovered from my ACL surgery faster than expected. Professional, knowledgeable, and genuinely caring.",
-        "date": "2024-10-22",
+        "text": "I was diagnosed with a disc bulge and had been suffering severe pain for over a month. Cortisone and strong painkillers weren't helping. After just four sessions with Marios, my pain was completely gone. I am extremely grateful for the professionalism, knowledge, and support I received.",
+        "date": "2025-02-10",
         "source": "google"
       },
       {
         "id": "review-3",
-        "name": "Sophie M.",
+        "name": "Stella E.",
         "rating": 5,
-        "text": "The best physiotherapy experience I've had. Every session is purposeful and I can feel the progress week by week.",
-        "date": "2024-09-30",
+        "text": "A stress reaction in the hip and pelvis had forced me to stop running. Through Marios' expertise and step-by-step guidance, I'm returning to running in very good physical condition. Most importantly, he took into account the psychological dimension — respecting my fear and anxiety with empathy. He doesn't treat you as just a number.",
+        "date": "2025-02-01",
         "source": "google"
       },
       {
         "id": "review-4",
-        "name": "Dmitri V.",
-        "rating": 4,
-        "text": "Very professional clinic. The therapist explained everything clearly and the exercises really helped with my shoulder.",
-        "date": "2024-08-18",
+        "name": "Paris L.",
+        "rating": 5,
+        "text": "After a motorcycle accident, every doctor told me surgery was urgently needed for my AC joint. Thanks to Marios, I recovered without surgery. His knowledge, hands-on treatment, and structured rehab plan made a huge difference. I'm back to normal function and extremely grateful.",
+        "date": "2025-01-15",
         "source": "google"
       }
     ]
   },
+
   "therapist": {
-    "headline": "Meet Your Therapist",
-    "name": "Dr. Elena Papadopoulos",
-    "title": "Senior Physiotherapist, MSc",
-    "bio": "With over 15 years of hands-on clinical experience, Dr. Papadopoulos combines evidence-based manual therapy with a deeply personalized approach. Trained in London and Athens, she specializes in sports rehabilitation, chronic pain management, and post-surgical recovery — helping hundreds of patients reclaim movement and confidence in their bodies.",
+    "headline": "Meet Marios Liasides",
+    "name": "Marios Liasides",
+    "title": "Lead Physiotherapist & Sports Rehab Specialist",
+    "bio": "Marios specialises in getting people back to full function — whether that's a professional fighter returning to competition, a runner overcoming a stress injury, or someone recovering from spinal surgery. His patients consistently highlight one thing: he treats the root cause, not just the symptoms. With a structured, evidence-based approach to rehabilitation and a genuine investment in every patient's recovery, Marios has helped athletes avoid surgery, overcome chronic pain, and return to performance stronger than before their injury.",
     "credentials": [
-      "MSc Physiotherapy — King's College London",
-      "BSc Sports Science — University of Athens",
-      "Certified Dry Needling Practitioner",
-      "Member, World Confederation for Physical Therapy"
+      "BSc Physiotherapy",
+      "Sports Injury Rehabilitation Specialist",
+      "Strength & Conditioning Coach",
+      "Experience with ACL, SLAP, spinal, and combat sports injuries"
     ],
     "image": "/images/therapist.jpg",
-    "ctaText": "Book a Session",
+    "ctaText": "Book a Session With Marios",
     "ctaLink": "#booking"
   },
 
   "location": {
     "headline": "Visit Our Clinic",
     "address": {
-      "street": "42 Makarios Avenue",
+      "street": "Agios Athanasios",
       "city": "Limassol",
-      "postalCode": "3020",
+      "postalCode": "4107",
       "country": "Cyprus"
     },
     "coordinates": {
-      "lat": 34.6786,
-      "lng": 33.0413
+      "lat": 34.70965876034343,
+      "lng": 33.072360065785475
     },
     "mapZoom": 15,
     "hours": [
-      { "days": "Monday – Friday", "time": "08:00 – 19:00" },
+      { "days": "Monday – Friday", "time": "09:00 – 19:00" },
       { "days": "Saturday", "time": "09:00 – 14:00" },
       { "days": "Sunday", "time": "Closed" }
     ],
@@ -187,7 +194,7 @@
   "booking": {
     "enabled": true,
     "type": "calendly",
-    "url": "https://calendly.com/your-link",
+    "url": "https://calendly.com/useofprocrastination",
     "mode": "popup",
     "headline": "Book Your Appointment",
     "subheadline": "Choose a time that works for you. Consultations are 30 minutes."
@@ -204,24 +211,24 @@
   },
 
   "social": {
-    "instagram": "https://instagram.com/physiovita",
-    "facebook": "https://facebook.com/physiovita",
+    "instagram": "https://www.instagram.com/reactive_liasides_physio/",
+    "facebook": "https://www.facebook.com/p/Liasides-Physio-100063626286042/",
     "linkedin": "https://linkedin.com/company/physiovita"
   },
 
   "footer": {
-    "copyright": "© 2024 PhysioVita. All rights reserved.",
+    "copyright": "© 2026 Liasides Physio. All rights reserved.",
     "privacyPolicyUrl": "/privacy",
     "termsUrl": "/terms",
     "builtBy": {
-      "name": "YourAgency",
-      "url": "https://youragency.com"
+      "name": "Clovo Solutions",
+      "url": "https://clovo-solutions.com"
     }
   },
 
   "theme": {
-    "primaryColor": "#2A9D8F",
-    "accentColor": "#E9C46A",
+    "primaryColor": "#38ACD4;",
+    "accentColor": "#5B7CA8",
     "surfaceColor": "#faf9f7",
     "inkColor": "#1c1917",
     "fontDisplay": "Playfair Display",

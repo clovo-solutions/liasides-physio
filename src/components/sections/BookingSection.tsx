@@ -170,7 +170,7 @@ export function BookingSection({ data }: BookingSectionProps) {
           </Button>
 
           {/* Subtle trust line */}
-          <p className="text-xs text-ink-muted">{t.booking.trustLine}</p>
+          {/* <p className="text-xs text-ink-muted">{t.booking.trustLine}</p> */}
         </motion.div>
       )}
     </SectionWrapper>
