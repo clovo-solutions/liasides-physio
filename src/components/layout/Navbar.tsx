@@ -10,12 +10,16 @@ interface NavbarProps {
   business: BusinessInfo;
 }
 
+const SECTION_IDS = ["about", "services", "reviews", "location", "contact"];
+
 export function Navbar({ business }: NavbarProps) {
   const { locale, setLocale, t } = useI18n();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
+  /* ── Scroll detection ────────────────────────────────── */
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -23,6 +27,38 @@ export function Navbar({ business }: NavbarProps) {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => {
       window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  /* ── Active section tracking via IntersectionObserver ── */
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+
+    SECTION_IDS.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) {
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setActiveSection(id);
+          }
+        },
+        {
+          rootMargin: "-40% 0px -55% 0px",
+        }
+      );
+
+      observer.observe(el);
+      observers.push(observer);
+    });
+
+    return () => {
+      observers.forEach((obs) => {
+        obs.disconnect();
+      });
     };
   }, []);
 
@@ -34,13 +70,18 @@ export function Navbar({ business }: NavbarProps) {
     { href: "#contact", label: t.nav.contact },
   ];
 
-  /* ── Color scheme flips based on scroll position ─────
-     Not scrolled = over hero image → white text
-     Scrolled = white background → dark text              */
   const logoColor = scrolled ? "text-brand-800" : "text-white";
-  const linkColor = scrolled
-    ? "text-ink-secondary hover:text-brand-700"
-    : "text-white/80 hover:text-white";
+  const linkColor = (href: string) => {
+    const id = href.replace("#", "");
+    const isActive = activeSection === id;
+
+    if (scrolled) {
+      return isActive
+        ? "text-brand-800"
+        : "text-ink-secondary hover:text-brand-700";
+    }
+    return isActive ? "text-white" : "text-white/70 hover:text-white";
+  };
   const iconColor = scrolled
     ? "text-ink-secondary hover:text-brand-700"
     : "text-white/80 hover:text-white";
@@ -65,15 +106,33 @@ export function Navbar({ business }: NavbarProps) {
 
           {/* ── Desktop Nav ────────────────────────────────── */}
           <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className={`text-sm font-medium transition-colors duration-300 ${linkColor}`}
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const id = link.href.replace("#", "");
+              const isActive = activeSection === id;
+
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={`relative text-sm font-medium transition-colors duration-300 py-1 ${linkColor(
+                    link.href
+                  )}`}
+                >
+                  {link.label}
+
+                  {/* Active indicator dot */}
+                  <span
+                    className={`absolute -bottom-1 left-1/2 -translate-x-1/2 h-1 w-1 rounded-full transition-all duration-300 ${
+                      isActive
+                        ? scrolled
+                          ? "bg-brand-600 scale-100 opacity-100"
+                          : "bg-white scale-100 opacity-100"
+                        : "bg-transparent scale-0 opacity-0"
+                    }`}
+                  />
+                </a>
+              );
+            })}
 
             {/* ── Language Switcher ─────────────────────────── */}
             <div className="relative">
@@ -138,6 +197,8 @@ export function Navbar({ business }: NavbarProps) {
           </button>
         </div>
       </div>
+
+      {/* ── Mobile Menu ──────────────────────────────────── */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -148,18 +209,33 @@ export function Navbar({ business }: NavbarProps) {
             className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-brand-100 overflow-hidden"
           >
             <div className="px-5 py-6 space-y-1">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => {
-                    setIsOpen(false);
-                  }}
-                  className="block px-4 py-3 text-base font-medium text-ink-secondary hover:text-brand-700 hover:bg-brand-50 rounded-xl transition-colors"
-                >
-                  {link.label}
-                </a>
-              ))}
+              {navLinks.map((link) => {
+                const id = link.href.replace("#", "");
+                const isActive = activeSection === id;
+
+                return (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => {
+                      setIsOpen(false);
+                    }}
+                    className={`flex items-center gap-3 px-4 py-3 text-base font-medium rounded-xl transition-colors ${
+                      isActive
+                        ? "text-brand-800 bg-brand-50"
+                        : "text-ink-secondary hover:text-brand-700 hover:bg-brand-50"
+                    }`}
+                  >
+                    {/* Mobile active indicator — small bar on the left */}
+                    <span
+                      className={`w-0.5 h-5 rounded-full transition-all duration-300 ${
+                        isActive ? "bg-brand-600" : "bg-transparent"
+                      }`}
+                    />
+                    {link.label}
+                  </a>
+                );
+              })}
 
               {/* Mobile language switcher */}
               <div className="pt-4 border-t border-brand-100 mt-4 flex gap-2">
