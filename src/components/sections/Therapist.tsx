@@ -48,7 +48,7 @@ export function Therapist({ data }: TherapistProps) {
 
           <div
             className={clsx(
-              "absolute -bottom-4 -right-4 lg:-right-6 bg-white rounded-2xl border border-brand-100 shadow-lg px-5 py-4 z-10 anim-fade-up",
+              "absolute -bottom-4 right-0 lg:-right-6 bg-white rounded-2xl border border-brand-100 shadow-lg px-5 py-4 z-10 anim-fade-up",
               imgInView && "in-view"
             )}
             style={{ transitionDelay: "0.4s" }}

@@ -42,6 +42,11 @@
     --anim-stagger: 0.1s;
   }
 
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
