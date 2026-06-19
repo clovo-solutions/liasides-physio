@@ -28,7 +28,7 @@ export function Therapist({ data }: TherapistProps) {
   ].filter(Boolean);
 
   return (
-    <SectionWrapper id="therapist" label={t.therapist.sectionLabel}>
+    <SectionWrapper id="therapist" label={t.therapist.sectionLabel} background="warm">
       <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         {/* Image Side */}
         <div

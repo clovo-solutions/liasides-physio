@@ -3,7 +3,9 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
+    "team": "Team",
     "reviews": "Reviews",
+    "articles": "Insights",
     "location": "Location",
     "contact": "Contact"
   },
@@ -79,6 +81,38 @@
     "credential4": "Experience with ACL, SLAP, spinal, and combat sports injuries",
     "yearsExperience": "years of experience",
     "ctaText": "Book a Session With Marios"
+  },
+  "team": {
+    "sectionLabel": "Our Team",
+    "headline": "Meet Our Specialists",
+    "subheadline": "A multidisciplinary team dedicated to getting you back to full strength — every one of them personally invested in your recovery.",
+    "viewProfile": "View profile",
+    "prev": "Previous specialists",
+    "next": "Next specialists"
+  },
+  "articles": {
+    "sectionLabel": "Insights",
+    "headline": "Latest Articles & Insights",
+    "subheadline": "Evidence-based guidance on injury recovery, performance, and staying pain-free — written by our physiotherapy team.",
+    "readMore": "Read more",
+    "viewAll": "View all articles",
+    "featured": "Featured"
+  },
+  "stats": {
+    "googleRating": "Google Rating",
+    "verifiedReviews": "Verified Reviews"
+  },
+  "articlePage": {
+    "allInsights": "All Insights",
+    "writtenBy": "Written by",
+    "keyTakeaways": "Key takeaways",
+    "references": "References",
+    "relatedReading": "Related reading",
+    "medicallyReviewed": "Medically reviewed by",
+    "disclaimer": "This article is for general education and isn't a substitute for personalised medical advice. Always consult a qualified physiotherapist or doctor about your specific condition.",
+    "ctaTitle": "Have a question about your injury?",
+    "ctaText": "Book an assessment and get a clear, personalised plan built around your goals.",
+    "ctaButton": "Book an Assessment"
   },
   "booking": {
     "sectionLabel": "Book an Appointment",

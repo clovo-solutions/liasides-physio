@@ -85,6 +85,64 @@
     text-wrap: balance;
   }
 
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* ── Premium primitives ──────────────────────────────────
+     Shared building blocks so every section reads as one
+     cohesive design system instead of one-off styles.       */
+
+  /* Section eyebrow: small uppercase label with accent tick */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-brand-600;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply block h-px w-6 bg-accent-500;
+  }
+
+  /* Warm gold gradient text for accent numerals/words */
+  .text-gradient-accent {
+    @apply bg-gradient-to-br from-accent-600 to-accent-400 bg-clip-text text-transparent;
+  }
+
+  /* Standard elevated card surface */
+  .card-surface {
+    @apply bg-white rounded-2xl border border-brand-100 shadow-card transition-all duration-300;
+  }
+  .card-surface:hover {
+    @apply border-brand-200 shadow-card-hover;
+  }
+
+  /* Thin decorative divider with a centered accent dot */
+  .divider-accent {
+    @apply flex items-center gap-3;
+  }
+  .divider-accent::before,
+  .divider-accent::after {
+    content: "";
+    @apply block h-px w-10 bg-brand-200;
+  }
+
+  /* Hide scrollbars on the horizontal carousel while keeping scroll */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Horizontal scroll-snap track for carousels */
+  .snap-track {
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+  .snap-item {
+    scroll-snap-align: start;
+  }
+
   .line-clamp-3 {
     display: -webkit-box;
     -webkit-line-clamp: 3;

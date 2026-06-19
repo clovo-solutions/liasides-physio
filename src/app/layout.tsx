@@ -9,9 +9,11 @@ const seo = getSEO();
 const siteData = getSiteData();
 
 export const metadata: Metadata = {
+  metadataBase: new URL(seo.url),
   title: seo.title,
   description: seo.description,
   keywords: seo.keywords,
+  alternates: { canonical: "/" },
   openGraph: {
     title: seo.title,
     description: seo.description,
@@ -52,6 +54,12 @@ const structuredData = {
     name: siteData.therapist.name,
     jobTitle: siteData.therapist.title,
   },
+  employee: siteData.team.map((member) => ({
+    "@type": "Person",
+    name: member.name,
+    jobTitle: member.role,
+    description: member.bio,
+  })),
   address: {
     "@type": "PostalAddress",
     streetAddress: siteData.location.address.street,
@@ -104,6 +112,30 @@ const structuredData = {
   ].filter(Boolean),
 };
 
+/* ── Blog structured data ────────────────────────────────
+   Marks the Insights section up as a Blog with BlogPosting
+   entries so articles are eligible for rich results and
+   surfaced as discoverable content.                        */
+const blogStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: `${siteData.business.name} — Insights`,
+  url: `${seo.url}/#articles`,
+  blogPost: siteData.articles.map((article) => ({
+    "@type": "BlogPosting",
+    headline: article.title,
+    description: article.excerpt,
+    datePublished: article.date,
+    articleSection: article.category,
+    url:
+      article.url && article.url !== "#"
+        ? article.url
+        : `${seo.url}/#${article.slug}`,
+    author: { "@type": "Organization", name: siteData.business.name },
+    publisher: { "@type": "Organization", name: siteData.business.name },
+  })),
+};
+
 export default async function RootLayout({
   children,
 }: {
@@ -127,6 +159,12 @@ export default async function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(ldJson),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(blogStructuredData),
           }}
         />
       </head>

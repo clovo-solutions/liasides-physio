@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useI18n } from "@/lib/i18n";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/Icon";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
 import type { ContactData, SocialLinks } from "@/lib/types";
@@ -16,15 +17,14 @@ export function Contact({ data, social }: ContactProps) {
   const { t } = useI18n();
 
   return (
-    <SectionWrapper id="contact" label={t.contact.sectionLabel}>
-      <div className="text-center mb-14">
-        <h2 className="font-display text-display-lg font-semibold text-brand-900 mb-4 text-balance">
-          {t.contact.headline}
-        </h2>
-        <p className="text-ink-secondary text-lg max-w-2xl mx-auto">
-          {t.contact.subheadline}
-        </p>
-      </div>
+    <SectionWrapper id="contact">
+      <SectionHeading
+        eyebrow={t.contact.sectionLabel}
+        title={t.contact.headline}
+        subtitle={t.contact.subheadline}
+        className="mb-14"
+      />
+
 
       <motion.div
         className="flex flex-col items-center gap-6 max-w-md mx-auto"

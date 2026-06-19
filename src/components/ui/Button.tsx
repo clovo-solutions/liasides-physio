@@ -3,7 +3,7 @@
 import { motion, HTMLMotionProps } from "framer-motion";
 import { clsx } from "clsx";
 
-type ButtonVariant = "primary" | "secondary" | "ghost";
+type ButtonVariant = "primary" | "secondary" | "ghost" | "glass";
 type ButtonSize = "sm" | "md" | "lg";
 
 interface ButtonProps extends Omit<HTMLMotionProps<"button">, "children"> {
@@ -20,6 +20,8 @@ const variantStyles: Record<ButtonVariant, string> = {
     "bg-white text-brand-800 border border-brand-200 hover:border-brand-400 hover:bg-brand-50",
   ghost:
     "text-brand-700 hover:bg-brand-100",
+  glass:
+    "bg-white/10 text-white border border-white/30 backdrop-blur-md hover:bg-white/20",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {

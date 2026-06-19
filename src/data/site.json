@@ -192,10 +192,94 @@
   },
 
 
+  "stats": [
+    { "value": "15+", "label": "Years of Experience", "icon": "award" },
+    { "value": "1,000+", "label": "Patients Treated", "icon": "users" }
+  ],
+
+  "team": [
+    {
+      "id": "marios-liasides",
+      "name": "Marios Liasides",
+      "role": "Lead Physiotherapist & Sports Rehab Specialist",
+      "bio": "Founder of the clinic, specialising in sports injury rehabilitation, post-surgical recovery, and strength & conditioning for athletes of every level.",
+      "image": "/images/therapist.jpg",
+      "specialties": ["Sports Rehab", "Post-Surgical", "S&C"]
+    },
+    {
+      "id": "placeholder-specialist-1",
+      "name": "Andreas Petrou",
+      "role": "Sports Physiotherapist",
+      "bio": "Placeholder profile — replace with a real team member. Focused on lower-limb injuries, running mechanics, and return-to-sport programming.",
+      "specialties": ["Running", "Lower Limb", "Return to Sport"]
+    },
+    {
+      "id": "placeholder-specialist-2",
+      "name": "Sophia Ioannou",
+      "role": "Musculoskeletal Physiotherapist",
+      "bio": "Placeholder profile — replace with a real team member. Specialises in spinal conditions, manual therapy, and chronic pain management.",
+      "specialties": ["Spine & Back", "Manual Therapy", "Chronic Pain"]
+    },
+    {
+      "id": "placeholder-specialist-3",
+      "name": "Christina Nicolaou",
+      "role": "Rehabilitation Specialist",
+      "bio": "Placeholder profile — replace with a real team member. Guides post-operative patients through structured, phased recovery plans.",
+      "specialties": ["Post-Op", "Mobility", "Strength"]
+    }
+  ],
+
+  "articles": [
+    {
+      "id": "article-hamstring-warmup",
+      "slug": "warm-up-mistakes-hamstring-injuries",
+      "category": "Injury Prevention",
+      "image": "/images/1.png",
+      "title": "5 Warm-Up Mistakes That Lead to Hamstring Injuries",
+      "excerpt": "Most hamstring strains are preventable. Here are the warm-up habits quietly putting your sprint speed — and your season — at risk.",
+      "date": "2026-05-28",
+      "readingTime": "5 min read",
+      "url": "/articles/warm-up-mistakes-hamstring-injuries"
+    },
+    {
+      "id": "article-acl-timeline",
+      "slug": "acl-recovery-timeline-week-by-week",
+      "category": "Rehabilitation",
+      "image": "/images/2.png",
+      "title": "ACL Recovery Timeline: What to Expect Week by Week",
+      "excerpt": "From day-one swelling to a confident return to sport — a realistic, phase-by-phase look at what good ACL rehabilitation actually involves.",
+      "date": "2026-05-12",
+      "readingTime": "8 min read",
+      "url": "/articles/acl-recovery-timeline-week-by-week"
+    },
+    {
+      "id": "article-disc-bulge-surgery",
+      "slug": "disc-bulge-vs-herniation-surgery",
+      "category": "Back Pain",
+      "image": "/images/3.png",
+      "title": "Disc Bulge vs Herniation: Do You Really Need Surgery?",
+      "excerpt": "Many patients are told surgery is their only option. We break down when conservative rehab works — and when the operating table is truly necessary.",
+      "date": "2026-04-20",
+      "readingTime": "6 min read",
+      "url": "/articles/disc-bulge-vs-herniation-surgery"
+    },
+    {
+      "id": "article-strength-for-runners",
+      "slug": "strength-training-for-runners",
+      "category": "Performance",
+      "image": "/images/4.png",
+      "title": "Strength Training for Runners: Prevent Injury, Run Faster",
+      "excerpt": "Mileage alone won't make you resilient. Here's how targeted strength work keeps runners healthy and shaves time off your personal best.",
+      "date": "2026-03-30",
+      "readingTime": "7 min read",
+      "url": "/articles/strength-training-for-runners"
+    }
+  ],
+
   "booking": {
     "enabled": true,
-    "type": "calendly",
-    "url": "https://calendly.com/useofprocrastination",
+    "type": "cal.com",
+    "calLink": "clovo-solutions-7teskm",
     "mode": "popup",
     "headline": "Book Your Appointment",
     "subheadline": "Choose a time that works for you. Consultations are 30 minutes."

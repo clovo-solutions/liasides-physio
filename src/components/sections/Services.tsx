@@ -3,6 +3,7 @@
 import { useI18n } from "@/lib/i18n";
 import { useInView } from "@/lib/useInView";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/Icon";
 import { clsx } from "clsx";
 import type { ServicesData } from "@/lib/types";
@@ -16,19 +17,13 @@ export function Services({ data }: ServicesProps) {
   const { ref, isInView } = useInView();
 
   return (
-    <SectionWrapper
-      id="services"
-      label={t.services.sectionLabel}
-      background="warm"
-    >
-      <div className="text-center mb-14">
-        <h2 className="font-display text-display-lg font-semibold text-brand-900 mb-4 text-balance">
-          {t.services.headline}
-        </h2>
-        <p className="text-ink-secondary text-lg max-w-2xl mx-auto">
-          {t.services.subheadline}
-        </p>
-      </div>
+    <SectionWrapper id="services" background="warm">
+      <SectionHeading
+        eyebrow={t.services.sectionLabel}
+        title={t.services.headline}
+        subtitle={t.services.subheadline}
+        className="mb-14"
+      />
 
       <div
         ref={ref}

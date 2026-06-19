@@ -67,8 +67,18 @@ const config: Config = {
         body: ['"DM Sans"', "system-ui", "sans-serif"],
       },
       fontSize: {
-        "display-xl": ["clamp(2.5rem, 5vw, 4.5rem)", { lineHeight: "1.1" }],
-        "display-lg": ["clamp(2rem, 4vw, 3.5rem)", { lineHeight: "1.15" }],
+        "display-2xl": [
+          "clamp(3rem, 6vw, 5.5rem)",
+          { lineHeight: "1.05", letterSpacing: "-0.02em" },
+        ],
+        "display-xl": [
+          "clamp(2.5rem, 5vw, 4.5rem)",
+          { lineHeight: "1.1", letterSpacing: "-0.015em" },
+        ],
+        "display-lg": [
+          "clamp(2rem, 4vw, 3.5rem)",
+          { lineHeight: "1.15", letterSpacing: "-0.01em" },
+        ],
         "display-md": ["clamp(1.5rem, 3vw, 2.25rem)", { lineHeight: "1.2" }],
       },
       spacing: {
@@ -77,6 +87,13 @@ const config: Config = {
       borderRadius: {
         "2xl": "1rem",
         "3xl": "1.5rem",
+        "4xl": "2rem",
+      },
+      boxShadow: {
+        card: "0 1px 2px -1px rgb(28 25 23 / 0.06), 0 4px 16px -4px rgb(28 25 23 / 0.08)",
+        "card-hover":
+          "0 2px 4px -2px rgb(28 25 23 / 0.08), 0 18px 40px -12px rgb(28 25 23 / 0.16)",
+        glow: "0 10px 40px -12px rgb(var(--brand-700, 75 90 61) / 0.45)",
       },
       animation: {
         "fade-up": "fadeUp 0.6s ease-out forwards",

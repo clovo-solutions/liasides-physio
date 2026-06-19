@@ -35,11 +35,7 @@ export function SectionWrapper({
         ref={ref}
         className={clsx("container-narrow anim-fade-in", isInView && "in-view")}
       >
-        {label && (
-          <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase text-brand-600 mb-4">
-            {label}
-          </span>
-        )}
+        {label && <span className="eyebrow mb-4">{label}</span>}
         {children}
       </div>
     </section>

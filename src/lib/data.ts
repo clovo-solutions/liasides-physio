@@ -1,4 +1,4 @@
-import type { SiteData } from "./types";
+import type { SiteData, Article } from "./types";
 import siteDataJson from "@/data/site.json";
 
 /* ─────────────────────────────────────────────────────────
@@ -39,4 +39,12 @@ export function getBusinessName(): string {
 
 export function getSEO() {
   return siteDataJson.seo;
+}
+
+export function getArticles(): Article[] {
+  return siteDataJson.articles as unknown as Article[];
+}
+
+export function getArticleMeta(slug: string): Article | undefined {
+  return getArticles().find((a) => a.slug === slug);
 }

@@ -4,6 +4,7 @@ import { LayoutGroup, motion } from "framer-motion";
 import { useI18n } from "@/lib/i18n";
 import { useInView } from "@/lib/useInView";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { StarRating } from "@/components/ui/StarRating";
 import { ReviewCard } from "@/components/ui/ReviewCard";
 import { Icon } from "@/components/ui/Icon";
@@ -19,16 +20,16 @@ export function Reviews({ data }: ReviewsProps) {
   const { ref, isInView } = useInView();
 
   return (
-    <SectionWrapper id="reviews" label={t.reviews.sectionLabel}>
+    <SectionWrapper id="reviews">
       <div className="text-center mb-14">
-        <h2 className="font-display text-display-lg font-semibold text-brand-900 mb-4 text-balance">
-          {t.reviews.headline}
-        </h2>
-        <p className="text-ink-secondary text-lg mb-6">
-          {t.reviews.subheadline}
-        </p>
+        <SectionHeading
+          eyebrow={t.reviews.sectionLabel}
+          title={t.reviews.headline}
+          subtitle={t.reviews.subheadline}
+          className="mb-6"
+        />
 
-        <div className="inline-flex items-center gap-3 bg-white rounded-full px-5 py-2.5 border border-brand-100 shadow-sm">
+        <div className="inline-flex items-center gap-3 bg-white rounded-full px-5 py-2.5 border border-brand-100 shadow-card">
           <StarRating rating={data.averageRating} size="md" />
           <span className="font-display text-xl font-semibold text-brand-800">
             {data.averageRating}

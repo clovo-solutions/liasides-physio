@@ -16,6 +16,9 @@ export interface SiteData {
   reviews: ReviewsData;
   location: LocationData;
   therapist: TherapistSectionData;
+  team: TeamMember[];
+  articles: Article[];
+  stats: StatItem[];
   booking: BookingData;
   contact: ContactData;
   social: SocialLinks;
@@ -138,11 +141,77 @@ export interface TherapistSectionData {
   ctaLink: string;
 }
 
+/* ── Team / Specialists ────────────────────────────────────
+   Designed to map 1:1 to a CMS document (e.g. Sanity "person").
+   `image` is optional — the UI falls back to an initials avatar. */
+export interface TeamMember {
+  id: string;
+  name: string;
+  role: string;
+  bio: string;
+  image?: string;
+  specialties?: string[];
+}
+
+/* ── Articles / Blog ───────────────────────────────────────
+   Maps 1:1 to a CMS "post" document. `image` optional — the UI
+   falls back to a branded gradient cover. `url` points at the
+   future article route or external link. */
+export interface Article {
+  id: string;
+  slug: string;
+  category: string;
+  title: string;
+  excerpt: string;
+  image?: string;
+  date: string;
+  readingTime?: string;
+  url?: string;
+}
+
+/* ── Stats / trust band ───────────────────────────────────── */
+export interface StatItem {
+  value: string;
+  label: string;
+  icon: string;
+}
+
+/* ── Long-form article body ────────────────────────────────
+   A small portable-text-style block model so article bodies
+   render cleanly and map directly onto a CMS rich-text field. */
+export type ArticleBlock =
+  | { type: "paragraph"; text: string }
+  | { type: "heading"; text: string }
+  | { type: "list"; items: string[]; ordered?: boolean }
+  | {
+      type: "callout";
+      variant?: "info" | "warning";
+      title?: string;
+      text: string;
+    }
+  | { type: "quote"; text: string };
+
+export interface ArticleReference {
+  label: string;
+  url: string;
+}
+
+export interface ArticleContent {
+  slug: string;
+  intro: string;
+  body: ArticleBlock[];
+  keyTakeaways: string[];
+  references: ArticleReference[];
+  author: string;
+  reviewedBy?: string;
+}
+
 export interface BookingData {
   enabled: boolean;
-  type: "calendly";
-  url: string;
-  mode: "embed" | "popup";
+  type: "cal.com";
+  /** Cal.com public link slug, e.g. "clovo-solutions-7teskm". */
+  calLink: string;
+  mode: "popup";
   headline: string;
   subheadline: string;
 }
@@ -193,6 +262,10 @@ export interface Translations {
   reviews: Record<string, string>;
   location: Record<string, string>;
   therapist: Record<string, string>;
+  team: Record<string, string>;
+  articles: Record<string, string>;
+  articlePage: Record<string, string>;
+  stats: Record<string, string>;
   booking: Record<string, string>;
   contact: Record<string, string>;
   footer: Record<string, string>;

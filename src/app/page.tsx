@@ -2,11 +2,14 @@ import { getSiteData } from "@/lib/data";
 import { getReviewsData } from "@/lib/googleReviews";
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
+import { Stats } from "@/components/sections/Stats";
 import { About } from "@/components/sections/About";
 import { Services } from "@/components/sections/Services";
 import { Reviews } from "@/components/sections/Reviews";
 import { Location } from "@/components/sections/Location";
 import { Therapist } from "@/components/sections/Therapist";
+import { Team } from "@/components/sections/Team";
+import { Articles } from "@/components/sections/Articles";
 import { BookingSection } from "@/components/sections/BookingSection";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/sections/Footer";
@@ -35,11 +38,22 @@ export default async function Home() {
     <>
       <Navbar business={data.business} />
       <main>
-        <Hero data={data.hero} />
+        <Hero
+          data={data.hero}
+          rating={reviews.averageRating}
+          reviewCount={reviews.totalReviews}
+        />
+        <Stats
+          stats={data.stats}
+          rating={reviews.averageRating}
+          reviewCount={reviews.totalReviews}
+        />
         <About data={data.about} />
         <Therapist data={data.therapist} />
+        <Team data={data.team} />
         <Services data={data.services} />
         <Reviews data={reviews} />
+        <Articles data={data.articles} />
         <BookingSection data={data.booking} />
         <Location data={data.location} />
         <Contact data={data.contact} social={data.social} />

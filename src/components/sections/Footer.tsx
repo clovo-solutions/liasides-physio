@@ -34,25 +34,25 @@ export function Footer({ data, business, social }: FooterProps) {
               </h4>
               <nav className="flex flex-col gap-2">
                 <a
-                  href="#about"
+                  href="/#about"
                   className="text-sm hover:text-white transition-colors"
                 >
                   {t.nav.about}
                 </a>
                 <a
-                  href="#services"
+                  href="/#services"
                   className="text-sm hover:text-white transition-colors"
                 >
                   {t.nav.services}
                 </a>
                 <a
-                  href="#reviews"
+                  href="/articles"
                   className="text-sm hover:text-white transition-colors"
                 >
-                  {t.nav.reviews}
+                  {t.nav.articles}
                 </a>
                 <a
-                  href="#contact"
+                  href="/#contact"
                   className="text-sm hover:text-white transition-colors"
                 >
                   {t.nav.contact}

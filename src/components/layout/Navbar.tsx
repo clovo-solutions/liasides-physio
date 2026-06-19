@@ -10,7 +10,14 @@ interface NavbarProps {
   business: BusinessInfo;
 }
 
-const SECTION_IDS = ["about", "services", "reviews", "location", "contact"];
+const SECTION_IDS = [
+  "about",
+  "services",
+  "team",
+  "reviews",
+  "articles",
+  "contact",
+];
 
 export function Navbar({ business }: NavbarProps) {
   const { locale, setLocale, t } = useI18n();
@@ -65,8 +72,9 @@ export function Navbar({ business }: NavbarProps) {
   const navLinks = [
     { href: "#about", label: t.nav.about },
     { href: "#services", label: t.nav.services },
+    { href: "#team", label: t.nav.team },
     { href: "#reviews", label: t.nav.reviews },
-    { href: "#location", label: t.nav.location },
+    { href: "#articles", label: t.nav.articles },
     { href: "#contact", label: t.nav.contact },
   ];
 
