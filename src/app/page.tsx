@@ -1,4 +1,5 @@
 import { getSiteData } from "@/lib/data";
+import { getReviewsData } from "@/lib/googleReviews";
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
@@ -24,8 +25,11 @@ import { Footer } from "@/components/sections/Footer";
    }
    ───────────────────────────────────────────────────────── */
 
-export default function Home() {
+export default async function Home() {
   const data = getSiteData();
+  // Rating + review count pulled live from Google (daily revalidate),
+  // falling back to site.json when unavailable.
+  const reviews = await getReviewsData();
 
   return (
     <>
@@ -35,7 +39,7 @@ export default function Home() {
         <About data={data.about} />
         <Therapist data={data.therapist} />
         <Services data={data.services} />
-        <Reviews data={data.reviews} />
+        <Reviews data={reviews} />
         <BookingSection data={data.booking} />
         <Location data={data.location} />
         <Contact data={data.contact} social={data.social} />

@@ -100,6 +100,8 @@ export interface ReviewsData {
   subheadline: string;
   averageRating: number;
   totalReviews: number;
+  /** Google CID (numeric place id) used to fetch live rating + review count. */
+  googleCid?: string;
   googleReviewsUrl: string;
   items: ReviewItem[];
 }

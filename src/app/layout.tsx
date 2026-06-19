@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getSEO, getBusinessName, getSiteData } from "@/lib/data";
+import { getReviewsData } from "@/lib/googleReviews";
 import { I18nProvider } from "@/lib/i18n";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import "./globals.css";
@@ -103,18 +104,29 @@ const structuredData = {
   ].filter(Boolean),
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  // Keep the JSON-LD aggregateRating in sync with the live Google values.
+  const reviews = await getReviewsData();
+  const ldJson = {
+    ...structuredData,
+    aggregateRating: {
+      ...structuredData.aggregateRating,
+      ratingValue: reviews.averageRating,
+      reviewCount: reviews.totalReviews,
+    },
+  };
+
   return (
     <html lang="en" className="scroll-smooth">
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
+            __html: JSON.stringify(ldJson),
           }}
         />
       </head>
